@@ -13,7 +13,7 @@ function App() {
       about: "About Us",
       login: "Login",
       register: "Create Account",
-
+      dashboard: "Dashboard",
       donate: "Donate Food",
       receive: "Receive Food",
 
@@ -49,68 +49,51 @@ function App() {
 
       back: "← Back to Home",
       donorDashboard: "Donor Dashboard",
-receiverDashboard: "Receiver Dashboard",
+      receiverDashboard: "Receiver Dashboard",
 
       donorTitle: "Donate Surplus Food",
-
       foodName: "Food Name",
       foodNamePlaceholder: "Example: Cooked Rice & Dal",
-
       quantity: "Total Meals / Packets",
       quantityPlaceholder: "Example: 100",
-
       foodType: "Food Type",
       veg: "Veg",
       nonVeg: "Non-Veg",
       both: "Both",
-
       pickupDate: "Pickup Date",
       pickupTime: "Pickup Time",
       from: "From",
       to: "To",
-
       location: "Pickup Location",
       locationPlaceholder: "Enter exact pickup location",
-
       contact: "Contact Number (Optional)",
       contactPlaceholder: "Example: +91 98765 43210",
-
       submit: "Post Food Donation",
 
       receiverTitle: "Receive Food",
-
       required: "Packets Required",
       requiredPlaceholder: "Example: 50",
-
       receiverLocation: "Current Location",
       receiverLocationPlaceholder: "Enter your current location",
-
       pickup: "Can you collect within the pickup time?",
       yes: "Yes",
       no: "No",
-
       request: "Request Food",
 
       registerTitle: "Create Account",
       chooseRole: "I want to register as",
       donorRole: "Food Donor",
       receiverRole: "Food Receiver",
-
       name: "Name / Organization Name",
       namePlaceholder: "Enter your name or organization name",
-
       email: "Email Address (Optional)",
       emailPlaceholder: "Example: example@email.com",
-
       phone: "Phone Number (Optional)",
       phonePlaceholder: "Example: +91 98765 43210",
-
       contactNote:
         "Email or Phone Number — at least one is required.",
-
       password: "Password",
       passwordPlaceholder: "Create a password",
-
       registerButton: "Create Account",
       alreadyAccount: "Already have an account?",
       goLogin: "Login",
@@ -119,61 +102,50 @@ receiverDashboard: "Receiver Dashboard",
       loginButton: "Login",
       noAccount: "Don't have an account?",
       createAccount: "Create Account",
-
       loginEmail: "Email Address",
       loginEmailPlaceholder: "Enter your email",
       loginPhone: "Phone Number",
       loginPhonePlaceholder: "Enter your phone number",
       loginNote:
         "Use the email or phone number you registered with.",
-        donorDashboard: "Donor Dashboard",
-receiverDashboard: "Receiver Dashboard",
-totalDonations: "Total Donations",
-foodAvailable: "Food Available",
-matched: "Matched",
-recentDonations: "Recent Donations",
-availableFood: "Available Food",
-packets: "Packets",
-myRequests: "My Requests",
-requests: "Requests",
-smartMatching: "Smart Food Matching",
-bestMatch: "Best Match",
-required: "Required",
-distance: "Distance",
-pickup: "Pickup",
-withinAvailableTime: "Within available time",
-remainingFood: "Remaining Food",
-nextMatch: "Available for Next Match",
-donationStatus: "Donation Status",
-available: "Available",
-requested: "Requested",
-pickedUp: "Picked Up",
-completed: "Completed",
-currentStatus: "Current Status",
-totalDonations: "Total Donations",
-foodAvailable: "Food Available",
-matched: "Matched",
-recentDonations: "Recent Donations",
 
-availableFood: "Available Food",
-myRequests: "My Requests",
-confirmed: "Confirmed",
+      totalDonations: "Total Donations",
+      donations: "Donations",
+      foodAvailable: "Food Available",
+      matched: "Matched",
+      recentDonations: "Recent Donations",
+      availableFood: "Available Food",
+      packets: "Packets",
+      myRequests: "My Requests",
+      requests: "Requests",
+      confirmed: "Confirmed",
+      smartMatching: "Smart Food Matching",
+      bestMatch: "Best Match",
+      required: "Required",
+      distance: "Distance",
+      withinAvailableTime: "Within available time",
+      remainingFood: "Remaining Food",
+      nextMatch: "Available for Next Match",
+      remainingFoodText:
+        "will remain available for the next suitable receiver.",
+      donationStatus: "Donation Status",
+      available: "Available",
+      requested: "Requested",
+      pickedUp: "Picked Up",
+      completed: "Completed",
+      currentStatus: "Current Status",
 
-smartMatching: "Smart Food Matching",
-bestMatch: "Best Match",
-required: "Required",
-distance: "Distance",
-pickup: "Pickup",
-withinAvailableTime: "Within available time",
-remainingFood: "Remaining Food",
-nextMatch: "Available for Next Match",
+      foodRice: "Cooked Rice & Dal",
+      foodKhichuri: "Vegetable Khichuri",
+      foodBread: "Bread & Curry",
+      bestMatchNgo: "Helping Hands NGO",
 
-donationStatus: "Donation Status",
-available: "Available",
-requested: "Requested",
-pickedUp: "Picked Up",
-completed: "Completed",
-currentStatus: "Current Status",
+      footerText: "Reducing food waste. Spreading hope.",
+      or: "OR",
+      donationSubmitted: "Donation form submitted!",
+      requestSubmitted: "Food request submitted!",
+      accountCreated: "Account created successfully!",
+      loginSuccess: "Login successful!",
     },
 
     bn: {
@@ -182,7 +154,7 @@ currentStatus: "Current Status",
       about: "আমাদের সম্পর্কে",
       login: "লগইন",
       register: "অ্যাকাউন্ট তৈরি করুন",
-
+      dashboard: "ড্যাশবোর্ড",
       donate: "খাবার দান করুন",
       receive: "খাবার গ্রহণ করুন",
 
@@ -209,7 +181,7 @@ currentStatus: "Current Status",
 
       foodRescue: "খাবার উদ্ধার",
       foodRescueText:
-        "পরিমাণ, অবস্থান এবং pickup সময়ের ভিত্তিতে দাতা ও কাছাকাছি গ্রহণকারীদের স্মার্টভাবে যুক্ত করুন।",
+        "পরিমাণ, অবস্থান এবং সংগ্রহের সময়ের ভিত্তিতে দাতা ও কাছাকাছি গ্রহণকারীদের স্মার্টভাবে যুক্ত করুন।",
 
       prediction: "খাবারের অপচয় পূর্বাভাস",
       predictionText:
@@ -218,68 +190,51 @@ currentStatus: "Current Status",
 
       back: "← হোমে ফিরে যান",
       donorDashboard: "দাতা ড্যাশবোর্ড",
-receiverDashboard: "গ্রহীতা ড্যাশবোর্ড",
+      receiverDashboard: "গ্রহীতা ড্যাশবোর্ড",
 
       donorTitle: "অতিরিক্ত খাবার দান করুন",
-
       foodName: "খাবারের নাম",
       foodNamePlaceholder: "উদাহরণ: রান্না করা ভাত ও ডাল",
-
       quantity: "মোট খাবার / প্যাকেট",
       quantityPlaceholder: "উদাহরণ: ১০০",
-
       foodType: "খাবারের ধরন",
       veg: "ভেজ",
       nonVeg: "নন-ভেজ",
       both: "দুটিই",
-
-      pickupDate: "Pickup-এর তারিখ",
-      pickupTime: "Pickup-এর সময়",
+      pickupDate: "সংগ্রহের তারিখ",
+      pickupTime: "সংগ্রহের সময়",
       from: "থেকে",
       to: "পর্যন্ত",
-
-      location: "Pickup-এর স্থান",
-      locationPlaceholder: "সঠিক pickup-এর স্থান লিখুন",
-
+      location: "সংগ্রহের স্থান",
+      locationPlaceholder: "সঠিক সংগ্রহের স্থান লিখুন",
       contact: "যোগাযোগের নম্বর (ঐচ্ছিক)",
       contactPlaceholder: "উদাহরণ: +91 98765 43210",
-
       submit: "খাবার দান পোস্ট করুন",
 
       receiverTitle: "খাবার গ্রহণ করুন",
-
       required: "প্রয়োজনীয় প্যাকেট",
       requiredPlaceholder: "উদাহরণ: ৫০",
-
       receiverLocation: "বর্তমান অবস্থান",
       receiverLocationPlaceholder: "আপনার বর্তমান অবস্থান লিখুন",
-
-      pickup: "আপনি কি pickup-এর সময়ের মধ্যে খাবার সংগ্রহ করতে পারবেন?",
+      pickup: "আপনি কি সংগ্রহের সময়ের মধ্যে খাবার সংগ্রহ করতে পারবেন?",
       yes: "হ্যাঁ",
       no: "না",
-
       request: "খাবারের অনুরোধ করুন",
 
       registerTitle: "অ্যাকাউন্ট তৈরি করুন",
       chooseRole: "আমি হিসেবে রেজিস্টার করতে চাই",
       donorRole: "খাবার দাতা",
       receiverRole: "খাবার গ্রহণকারী",
-
       name: "নাম / সংস্থার নাম",
       namePlaceholder: "আপনার নাম বা সংস্থার নাম লিখুন",
-
       email: "ইমেল ঠিকানা (ঐচ্ছিক)",
       emailPlaceholder: "উদাহরণ: example@email.com",
-
       phone: "ফোন নম্বর (ঐচ্ছিক)",
       phonePlaceholder: "উদাহরণ: +91 98765 43210",
-
       contactNote:
         "ইমেল অথবা ফোন নম্বর — অন্তত একটি দিতে হবে।",
-
       password: "পাসওয়ার্ড",
       passwordPlaceholder: "একটি পাসওয়ার্ড তৈরি করুন",
-
       registerButton: "অ্যাকাউন্ট তৈরি করুন",
       alreadyAccount: "ইতিমধ্যেই অ্যাকাউন্ট আছে?",
       goLogin: "লগইন",
@@ -288,39 +243,50 @@ receiverDashboard: "গ্রহীতা ড্যাশবোর্ড",
       loginButton: "লগইন",
       noAccount: "অ্যাকাউন্ট নেই?",
       createAccount: "অ্যাকাউন্ট তৈরি করুন",
-
       loginEmail: "ইমেল ঠিকানা",
       loginEmailPlaceholder: "আপনার ইমেল লিখুন",
       loginPhone: "ফোন নম্বর",
       loginPhonePlaceholder: "আপনার ফোন নম্বর লিখুন",
       loginNote:
-        "আপনি যে email অথবা phone দিয়ে register করেছেন সেটি ব্যবহার করুন।",
-        totalDonations: "মোট দান",
-donations: "দান",
-foodAvailable: "উপলব্ধ খাবার",
-matched: "ম্যাচ হয়েছে",
-recentDonations: "সাম্প্রতিক দান",
+        "আপনি যে ইমেল অথবা ফোন নম্বর দিয়ে রেজিস্টার করেছেন সেটি ব্যবহার করুন।",
 
-availableFood: "উপলব্ধ খাবার",
-packets: "প্যাকেট",
-myRequests: "আমার অনুরোধ",
-requests: "অনুরোধ",
-confirmed: "নিশ্চিত",
+      totalDonations: "মোট দান",
+      donations: "দান",
+      foodAvailable: "উপলব্ধ খাবার",
+      matched: "ম্যাচ হয়েছে",
+      recentDonations: "সাম্প্রতিক দান",
+      availableFood: "উপলব্ধ খাবার",
+      packets: "প্যাকেট",
+      myRequests: "আমার অনুরোধ",
+      requests: "অনুরোধ",
+      confirmed: "নিশ্চিত",
+      smartMatching: "স্মার্ট খাবার ম্যাচিং",
+      bestMatch: "সেরা ম্যাচ",
+      required: "প্রয়োজন",
+      distance: "দূরত্ব",
+      withinAvailableTime: "উপলব্ধ সময়ের মধ্যে",
+      remainingFood: "অবশিষ্ট খাবার",
+      nextMatch: "পরবর্তী ম্যাচের জন্য উপলব্ধ",
+      remainingFoodText:
+        "পরবর্তী উপযুক্ত গ্রহীতার জন্য উপলব্ধ থাকবে।",
+      donationStatus: "দানের অবস্থা",
+      available: "উপলব্ধ",
+      requested: "অনুরোধ করা হয়েছে",
+      pickedUp: "সংগ্রহ করা হয়েছে",
+      completed: "সম্পন্ন",
+      currentStatus: "বর্তমান অবস্থা",
 
-smartMatching: "স্মার্ট খাবার ম্যাচিং",
-bestMatch: "সেরা ম্যাচ",
-required: "প্রয়োজন",
-distance: "দূরত্ব",
-pickup: "সংগ্রহ",
-withinAvailableTime: "উপলব্ধ সময়ের মধ্যে",
-remainingFood: "অবশিষ্ট খাবার",
-nextMatch: "পরবর্তী ম্যাচের জন্য উপলব্ধ",
+      foodRice: "রান্না করা ভাত ও ডাল",
+      foodKhichuri: "সবজি খিচুড়ি",
+      foodBread: "রুটি ও তরকারি",
+      bestMatchNgo: "হেল্পিং হ্যান্ডস NGO",
 
-donationStatus: "দানের অবস্থা",
-available: "উপলব্ধ",
-requested: "অনুরোধ করা হয়েছে",
-pickedUp: "সংগ্রহ করা হয়েছে",
-completed: "সম্পন্ন",
+      footerText: "খাবারের অপচয় কমাই। আশার আলো ছড়াই।",
+      or: "অথবা",
+      donationSubmitted: "খাবার দানের ফর্ম জমা হয়েছে!",
+      requestSubmitted: "খাবারের অনুরোধ জমা হয়েছে!",
+      accountCreated: "অ্যাকাউন্ট সফলভাবে তৈরি হয়েছে!",
+      loginSuccess: "লগইন সফল হয়েছে!",
     },
 
     hi: {
@@ -329,7 +295,7 @@ completed: "সম্পন্ন",
       about: "हमारे बारे में",
       login: "लॉगिन",
       register: "अकाउंट बनाएं",
-
+      dashboard: "डैशबोर्ड",
       donate: "भोजन दान करें",
       receive: "भोजन प्राप्त करें",
 
@@ -356,7 +322,7 @@ completed: "সম্পন্ন",
 
       foodRescue: "फूड रेस्क्यू",
       foodRescueText:
-        "मात्रा, स्थान और pickup समय के आधार पर भोजन दाताओं को नजदीकी प्राप्तकर्ताओं से स्मार्ट तरीके से जोड़ें।",
+        "मात्रा, स्थान और संग्रह समय के आधार पर भोजन दाताओं को नजदीकी प्राप्तकर्ताओं से स्मार्ट तरीके से जोड़ें।",
 
       prediction: "फूड वेस्ट प्रेडिक्शन",
       predictionText:
@@ -365,71 +331,51 @@ completed: "সম্পন্ন",
 
       back: "← होम पर वापस जाएं",
       donorDashboard: "दाता डैशबोर्ड",
-receiverDashboard: "प्राप्तकर्ता डैशबोर्ड",
-donorDashboard: "दाता डैशबोर्ड",
-receiverDashboard: "प्राप्तकर्ता डैशबोर्ड",
-requests: "अनुरोध",
-packets: "पैकेट",
-      donorTitle: "अतिरिक्त भोजन दान करें",
+      receiverDashboard: "प्राप्तकर्ता डैशबोर्ड",
 
+      donorTitle: "अतिरिक्त भोजन दान करें",
       foodName: "भोजन का नाम",
       foodNamePlaceholder: "उदाहरण: पका हुआ चावल और दाल",
-
       quantity: "कुल भोजन / पैकेट",
       quantityPlaceholder: "उदाहरण: 100",
-
       foodType: "भोजन का प्रकार",
       veg: "वेज",
       nonVeg: "नॉन-वेज",
       both: "दोनों",
-
-      pickupDate: "Pickup की तारीख",
-      pickupTime: "Pickup का समय",
+      pickupDate: "संग्रह की तारीख",
+      pickupTime: "संग्रह का समय",
       from: "से",
       to: "तक",
-
-      location: "Pickup स्थान",
-      locationPlaceholder: "सटीक pickup स्थान दर्ज करें",
-
+      location: "संग्रह स्थान",
+      locationPlaceholder: "सटीक संग्रह स्थान दर्ज करें",
       contact: "संपर्क नंबर (वैकल्पिक)",
       contactPlaceholder: "उदाहरण: +91 98765 43210",
-
       submit: "भोजन दान पोस्ट करें",
 
       receiverTitle: "भोजन प्राप्त करें",
-
       required: "आवश्यक पैकेट",
       requiredPlaceholder: "उदाहरण: 50",
-
       receiverLocation: "वर्तमान स्थान",
       receiverLocationPlaceholder: "अपना वर्तमान स्थान दर्ज करें",
-
-      pickup: "क्या आप pickup समय के अंदर भोजन ले सकते हैं?",
+      pickup: "क्या आप संग्रह समय के अंदर भोजन ले सकते हैं?",
       yes: "हाँ",
       no: "नहीं",
-
       request: "भोजन का अनुरोध करें",
 
       registerTitle: "अकाउंट बनाएं",
       chooseRole: "मैं किस रूप में रजिस्टर करना चाहता हूँ",
       donorRole: "भोजन दाता",
       receiverRole: "भोजन प्राप्तकर्ता",
-
       name: "नाम / संगठन का नाम",
       namePlaceholder: "अपना नाम या संगठन का नाम दर्ज करें",
-
       email: "ईमेल पता (वैकल्पिक)",
       emailPlaceholder: "उदाहरण: example@email.com",
-
       phone: "फोन नंबर (वैकल्पिक)",
       phonePlaceholder: "उदाहरण: +91 98765 43210",
-
       contactNote:
         "ईमेल या फोन नंबर — कम से कम एक देना जरूरी है।",
-
       password: "पासवर्ड",
       passwordPlaceholder: "एक पासवर्ड बनाएं",
-
       registerButton: "अकाउंट बनाएं",
       alreadyAccount: "पहले से अकाउंट है?",
       goLogin: "लॉगिन",
@@ -438,13 +384,50 @@ packets: "पैकेट",
       loginButton: "लॉगिन",
       noAccount: "अकाउंट नहीं है?",
       createAccount: "अकाउंट बनाएं",
-
       loginEmail: "ईमेल पता",
       loginEmailPlaceholder: "अपना ईमेल दर्ज करें",
       loginPhone: "फोन नंबर",
       loginPhonePlaceholder: "अपना फोन नंबर दर्ज करें",
       loginNote:
-        "जिस email या phone से आपने register किया है, उसका उपयोग करें।",
+        "जिस ईमेल या फोन नंबर से आपने रजिस्टर किया है, उसका उपयोग करें।",
+
+      totalDonations: "कुल दान",
+      donations: "दान",
+      foodAvailable: "उपलब्ध भोजन",
+      matched: "मैच किया गया",
+      recentDonations: "हाल के दान",
+      availableFood: "उपलब्ध भोजन",
+      packets: "पैकेट",
+      myRequests: "मेरे अनुरोध",
+      requests: "अनुरोध",
+      confirmed: "पुष्ट",
+      smartMatching: "स्मार्ट फूड मैचिंग",
+      bestMatch: "सबसे अच्छा मैच",
+      required: "आवश्यक",
+      distance: "दूरी",
+      withinAvailableTime: "उपलब्ध समय के अंदर",
+      remainingFood: "बचा हुआ भोजन",
+      nextMatch: "अगले मैच के लिए उपलब्ध",
+      remainingFoodText:
+        "अगले उपयुक्त प्राप्तकर्ता के लिए उपलब्ध रहेगा।",
+      donationStatus: "दान की स्थिति",
+      available: "उपलब्ध",
+      requested: "अनुरोध किया गया",
+      pickedUp: "संग्रह किया गया",
+      completed: "पूरा हुआ",
+      currentStatus: "वर्तमान स्थिति",
+
+      foodRice: "पका हुआ चावल और दाल",
+      foodKhichuri: "सब्ज़ी खिचड़ी",
+      foodBread: "रोटी और सब्ज़ी",
+      bestMatchNgo: "हेल्पिंग हैंड्स NGO",
+
+      footerText: "खाद्य अपव्यय कम करें। उम्मीद फैलाएं।",
+      or: "या",
+      donationSubmitted: "भोजन दान फॉर्म जमा हो गया!",
+      requestSubmitted: "भोजन अनुरोध जमा हो गया!",
+      accountCreated: "अकाउंट सफलतापूर्वक बन गया!",
+      loginSuccess: "लॉगिन सफल हुआ!",
     },
   };
 
@@ -492,18 +475,26 @@ if (page === "dashboard") {
   }}
 >
   <button
-    className="primary-button"
-    onClick={() => setDashboardRole("donor")}
-  >
-    {t.donorDashboard}
-  </button>
+  className={
+    dashboardRole === "donor"
+      ? "primary-button"
+      : "secondary-button"
+  }
+  onClick={() => setDashboardRole("donor")}
+>
+  {t.donorDashboard}
+</button>
 
-  <button
-    className="secondary-button"
-    onClick={() => setDashboardRole("receiver")}
-  >
-    {t.receiverDashboard}
-  </button>
+<button
+  className={
+    dashboardRole === "receiver"
+      ? "primary-button"
+      : "secondary-button"
+  }
+  onClick={() => setDashboardRole("receiver")}
+>
+  {t.receiverDashboard}
+</button>
 </div>
 
           {dashboardRole === "donor" ? (
@@ -530,17 +521,17 @@ if (page === "dashboard") {
 
               <div className="feature-card">
                 <h3>{t.recentDonations}</h3>
-                <p>🍚 Cooked Rice & Dal — 100 packets</p>
-                <p>🥘 Vegetable Khichuri — 80 packets</p>
-                <p>🍞 Bread & Curry — 70 packets</p>
+                <p>🍚 {t.foodRice} — 100 {t.packets}</p>
+                <p>🥘 {t.foodKhichuri} — 80 {t.packets}</p>
+                <p>🍞 {t.foodBread} — 70 {t.packets}</p>
               </div>
               <div className="feature-card matching-card">
   <h3>🤝 {t.smartMatching}</h3>
 
   <div className="match-item">
-    <h4>🍚 Cooked Rice & Dal</h4>
+    <h4>🍚 {t.foodRice}</h4>
     <p><strong>{t.available}:</strong> 100 {t.packets}</p>
-    <p><strong>{t.bestMatch}:</strong> Helping Hands NGO</p>
+    <p><strong>{t.bestMatch}:</strong> {t.bestMatchNgo}</p>
     <p><strong>{t.required}:</strong> 90 {t.packets}</p>
     <p><strong>{t.distance}:</strong> 2.5 km</p>
     <p><strong>{t.pickup}:</strong> {t.withinAvailableTime}</p>
@@ -552,7 +543,7 @@ if (page === "dashboard") {
 
   <div className="match-item">
     <h4>📦 {t.remainingFood}</h4>
-    <p>10 {t.packets} will remain available for the next suitable receiver.</p>
+    <p>10 {t.packets} {t.remainingFoodText}</p>
 
     <div className="match-status">
   🟡 {t.nextMatch}
@@ -578,7 +569,7 @@ if (page === "dashboard") {
 
     <div className="status-step active">
       <span>3</span>
-      <p>Matched</p>
+      <p>{t.matched}</p>
     </div>
 
     <div className="status-line"></div>
@@ -625,9 +616,9 @@ if (page === "dashboard") {
 
               <div className="feature-card">
                 <h3>{t.availableFood}</h3>
-                <p>🍚 Cooked Rice & Dal — 100 {t.packets}</p>
-                <p>🥘 Vegetable Khichuri — 80 {t.packets}</p>
-                <p>🍞 Bread & Curry — 70 packets</p>
+                <p>🍚 {t.foodRice} — 100 {t.packets}</p>
+                <p>🥘 {t.foodKhichuri} — 80 {t.packets}</p>
+                <p>🍞 {t.foodBread} — 70 {t.packets}</p>
               </div>
             </>
           )}
@@ -659,7 +650,7 @@ if (page === "dashboard") {
     className="login-button"
     onClick={() => setPage("dashboard")}
   >
-    Dashboard
+    {t.dashboard}
   </button>
 
   <select
@@ -752,7 +743,7 @@ if (page === "dashboard") {
 
         <footer>
           <div className="logo">FoodRescue</div>
-          <p>Reducing food waste. Spreading hope.</p>
+          <p>{t.footerText}</p>
         </footer>
       </div>
     );
@@ -793,7 +784,7 @@ if (page === "dashboard") {
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                alert("Donation form submitted!");
+                alert(t.donationSubmitted);
               }}
             >
               <div className="form-group">
@@ -919,7 +910,7 @@ if (page === "dashboard") {
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                alert("Food request submitted!");
+                alert(t.requestSubmitted);
               }}
             >
               <div className="form-group">
@@ -1033,7 +1024,7 @@ if (page === "dashboard") {
                   return;
                 }
 
-                alert("Account created successfully!");
+                alert(t.accountCreated);
               }}
             >
               <div className="form-group">
@@ -1184,7 +1175,7 @@ if (page === "dashboard") {
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                alert("Login successful!");
+                alert(t.loginSuccess);
               }}
             >
               <div className="form-group">
@@ -1203,7 +1194,7 @@ if (page === "dashboard") {
                   fontWeight: "600",
                 }}
               >
-                OR
+                {t.or}
               </div>
 
               <div className="form-group">
