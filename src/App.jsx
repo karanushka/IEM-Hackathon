@@ -782,15 +782,50 @@ if (page === "dashboard") {
             <h1>{t.donorTitle}</h1>
 
             <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert(t.donationSubmitted);
-              }}
-            >
+  onSubmit={async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+
+    try {
+      const response = await fetch("http://localhost:5000/api/donations", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          FOOD_NAME: form.foodName.value,
+          QUANTITY: Number(form.quantity.value),
+          FOOD_TYPE: form.foodType.value,
+          PICKUP_DATE: form.pickupDate.value,
+          PICKUP_FROM: form.pickupFrom.value,
+          PICKUP_TO: form.pickupTo.value,
+          PICKUP_LOCATION: form.pickupLocation.value,
+          CONTACT: form.contact.value,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        alert(data.error || "Donation failed");
+        return;
+      }
+
+      alert(t.donationSubmitted);
+      form.reset();
+
+    } catch (error) {
+      console.error(error);
+      alert("Cannot connect to backend. Is the backend running?");
+    }
+  }}
+>
               <div className="form-group">
                 <label>{t.foodName}</label>
                 <input
                   type="text"
+                  name="foodName"
                   placeholder={t.foodNamePlaceholder}
                   required
                 />
@@ -800,6 +835,7 @@ if (page === "dashboard") {
                 <label>{t.quantity}</label>
                 <input
                   type="number"
+                  name="quantity"
                   placeholder={t.quantityPlaceholder}
                   min="1"
                   required
@@ -811,17 +847,17 @@ if (page === "dashboard") {
 
                 <div className="food-type-options">
                   <label>
-                    <input type="radio" name="donorFoodType" required />
+                    <input type="radio" name="donorFoodType" value="veg" required />
                     {t.veg}
                   </label>
 
                   <label>
-                    <input type="radio" name="donorFoodType" />
+                    <input type="radio" name="donorFoodType" value="non-veg"/>
                     {t.nonVeg}
                   </label>
 
                   <label>
-                    <input type="radio" name="donorFoodType" />
+                    <input type="radio" name="donorFoodType" value="both" />
                     {t.both}
                   </label>
                 </div>
@@ -829,7 +865,7 @@ if (page === "dashboard") {
 
               <div className="form-group">
                 <label>{t.pickupDate}</label>
-                <input type="date" required />
+                <input type="date" name="pickupDate" required />
               </div>
 
               <div className="form-group">
@@ -838,12 +874,12 @@ if (page === "dashboard") {
                 <div className="pickup-time-row">
                   <div className="time-field">
                     <span>{t.from}</span>
-                    <input type="time" required />
+                    <input type="time" name="pickupFrom" required />
                   </div>
 
                   <div className="time-field">
                     <span>{t.to}</span>
-                    <input type="time" required />
+                    <input type="time" name="pickupTo" required />
                   </div>
                 </div>
               </div>
@@ -852,6 +888,7 @@ if (page === "dashboard") {
                 <label>{t.location}</label>
                 <input
                   type="text"
+                  name="pickupLocation"
                   placeholder={t.locationPlaceholder}
                   required
                 />
@@ -861,6 +898,7 @@ if (page === "dashboard") {
                 <label>{t.contact}</label>
                 <input
                   type="tel"
+                  name="contact"
                   placeholder={t.contactPlaceholder}
                 />
               </div>
