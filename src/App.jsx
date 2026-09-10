@@ -15,9 +15,9 @@ function App() {
   const loadDashboard = async () => {
     try {
       const [donationRes, requestRes, matchRes] = await Promise.all([
-         fetch("http://localhost:5000/api/donations"),
-         fetch("http://localhost:5000/api/requests"),
-         fetch("http://localhost:5000/api/matches"),
+        fetch("https://foodrescue-backend-2h9k.onrender.com/api/donations"),
+        fetch("https://foodrescue-backend-2h9k.onrender.com/api/requests"),
+        fetch("https://foodrescue-backend-2h9k.onrender.com/api/matches"),
       ]);
 
       const donationData = await donationRes.json();
@@ -31,7 +31,6 @@ function App() {
       setDonations(donationData.donations || []);
       setRequests(requestData.requests || []);
       setMatches(matchData.matches || []);
-
     } catch (error) {
       console.error("Dashboard error:", error);
     }
@@ -670,9 +669,12 @@ if (page === "dashboard") {
     </div>
   </div>
 
-  <p className="status-note">
-  {t.currentStatus}: <strong>{t.matched}</strong>
-</p>
+    <p className="status-note">
+    {t.currentStatus}:{" "}
+    <strong>
+      {donations.length > 0 ? donations[0].STATUS : "No donations"}
+    </strong>
+  </p>
 </div>
             </>
           ) : (
@@ -877,7 +879,7 @@ if (page === "dashboard") {
     const form = e.target;
 
     try {
-      const response = await fetch("http://localhost:5000/api/donations", {
+      const response = await fetch("https://foodrescue-backend-2h9k.onrender.com/api/donations", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -1035,71 +1037,127 @@ if (page === "dashboard") {
             <h1>{t.receiverTitle}</h1>
 
             <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert(t.requestSubmitted);
-              }}
-            >
-              <div className="form-group">
-                <label>{t.required}</label>
-                <input
-                  type="number"
-                  placeholder={t.requiredPlaceholder}
-                  min="1"
-                  required
-                />
-              </div>
+  onSubmit={async (e) => {
+    e.preventDefault();
 
-              <div className="form-group">
-                <label>{t.foodType}</label>
+    const form = e.target;
 
-                <div className="food-type-options">
-                  <label>
-                    <input type="radio" name="receiverFoodType" required />
-                    {t.veg}
-                  </label>
+    try {
+      const response = await fetch(
+        "https://foodrescue-backend-2h9k.onrender.com/api/requests",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            REQUIRED_QUANTITY: Number(form.requiredQuantity.value),
+            FOOD_TYPE: form.receiverFoodType.value,
+            LOCATION: form.receiverLocation.value,
+            CAN_COLLECT: form.pickupTime.value === "yes",
+          }),
+        }
+      );
 
-                  <label>
-                    <input type="radio" name="receiverFoodType" />
-                    {t.nonVeg}
-                  </label>
+      const data = await response.json();
 
-                  <label>
-                    <input type="radio" name="receiverFoodType" />
-                    {t.both}
-                  </label>
-                </div>
-              </div>
+      if (!response.ok) {
+        alert(data.error || "Food request failed");
+        return;
+      }
 
-              <div className="form-group">
-                <label>{t.receiverLocation}</label>
-                <input
-                  type="text"
-                  placeholder={t.receiverLocationPlaceholder}
-                  required
-                />
-              </div>
+      alert(t.requestSubmitted);
+      form.reset();
+    } catch (error) {
+      console.error(error);
+      alert("Cannot connect to backend.");
+    }
+  }}
+>
+  <div className="form-group">
+    <label>{t.required}</label>
+    <input
+      type="number"
+      name="requiredQuantity"
+      placeholder={t.requiredPlaceholder}
+      min="1"
+      required
+    />
+  </div>
 
-              <div className="form-group">
-                <label>{t.pickup}</label>
+  <div className="form-group">
+    <label>{t.foodType}</label>
 
-                <div className="food-type-options">
-                  <label>
-                    <input type="radio" name="pickupTime" required />
-                    {t.yes}
-                  </label>
+    <div className="food-type-options">
+      <label>
+        <input
+          type="radio"
+          name="receiverFoodType"
+          value="veg"
+          required
+        />
+        {t.veg}
+      </label>
 
-                  <label>
-                    <input type="radio" name="pickupTime" />
-                    {t.no}
-                  </label>
-                </div>
-              </div>
+      <label>
+        <input
+          type="radio"
+          name="receiverFoodType"
+          value="non-veg"
+        />
+        {t.nonVeg}
+      </label>
 
-              <button type="submit" className="submit-button">
-                {t.request}
-              </button>
-            </form>
+      <label>
+        <input
+          type="radio"
+          name="receiverFoodType"
+          value="both"
+        />
+        {t.both}
+      </label>
+    </div>
+  </div>
+
+  <div className="form-group">
+    <label>{t.receiverLocation}</label>
+    <input
+      type="text"
+      name="receiverLocation"
+      placeholder={t.receiverLocationPlaceholder}
+      required
+    />
+  </div>
+
+  <div className="form-group">
+    <label>{t.pickup}</label>
+
+    <div className="food-type-options">
+      <label>
+        <input
+          type="radio"
+          name="pickupTime"
+          value="yes"
+          required
+        />
+        {t.yes}
+      </label>
+
+      <label>
+        <input
+          type="radio"
+          name="pickupTime"
+          value="no"
+        />
+        {t.no}
+      </label>
+    </div>
+  </div>
+
+  <button type="submit" className="submit-button">
+    {t.request}
+  </button>
+</form>
           </div>
         </section>
       </div>
