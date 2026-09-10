@@ -1,0 +1,667 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5faf7;
+  color: #173b2a;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  height: 88px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  border-bottom: 1px solid #e5eee8;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: #16834b;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: #31523f;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav-links button:hover {
+  color: #16834b;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-right select {
+  padding: 10px 14px;
+  border: 1px solid #bfcfc5;
+  border-radius: 9px;
+  background: white;
+  color: #234331;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.login-button {
+  background: #16834b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #f4fbf6, #e8f7ee);
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero h1 {
+  font-size: 58px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  color: #173b2a;
+}
+
+.hero h1 span {
+  color: #16834b;
+}
+
+.hero p {
+  font-size: 19px;
+  line-height: 1.7;
+  color: #5b6f63;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.primary-button,
+.secondary-button {
+  padding: 14px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.primary-button {
+  background: #16834b;
+  color: white;
+  border: 2px solid #16834b;
+}
+
+.secondary-button {
+  background: white;
+  color: #16834b;
+  border: 2px solid #16834b;
+}
+
+.hero-card {
+  width: 340px;
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(30, 80, 50, 0.12);
+}
+
+.hero-icon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.hero-card h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.hero-card p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* =========================
+   ROLE CARDS
+========================= */
+
+.role-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 70px 10%;
+  background: white;
+}
+
+.role-card {
+  padding: 35px;
+  border: 1px solid #e0ebe4;
+  border-radius: 16px;
+  background: #fbfefc;
+}
+
+.card-icon {
+  font-size: 38px;
+  margin-bottom: 18px;
+}
+
+.role-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.role-card p {
+  color: #64756b;
+  line-height: 1.6;
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.feature-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  padding: 60px 10%;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 18px;
+  padding: 35px;
+  border: 1px solid #e0ebe4;
+}
+
+.feature-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  color: #64756b;
+  line-height: 1.6;
+}
+
+.coming-soon span {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 7px 13px;
+  border-radius: 20px;
+  background: #e7f6ed;
+  color: #16834b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================
+   FORM PAGE
+========================= */
+
+.form-page {
+  min-height: calc(100vh - 88px);
+  padding: 45px 20px 80px;
+  background: linear-gradient(135deg, #f5faf7, #eaf7ef);
+}
+
+.back-button {
+  display: block;
+  margin: 0 auto 32px;
+  padding: 11px 22px;
+  background: white;
+  color: #16834b;
+  border: 1px solid #16834b;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.back-button:hover {
+  background: #16834b;
+  color: white;
+}
+
+/* =========================
+   FORM CARD
+========================= */
+
+.form-card {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  background: white;
+  padding: 48px 50px;
+  border-radius: 22px;
+  box-shadow: 0 12px 40px rgba(30, 80, 50, 0.12);
+}
+
+.form-icon {
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 12px;
+}
+
+.form-card h1 {
+  text-align: center;
+  font-size: 34px;
+  color: #173b2a;
+  margin-bottom: 38px;
+}
+
+/* =========================
+   FORM FIELDS
+========================= */
+
+.form-group {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.form-group > label {
+  display: block;
+  width: 100%;
+  margin-bottom: 9px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #294936;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="tel"],
+.form-group input[type="date"] {
+  display: block;
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  border: 1px solid #cbdad1;
+  border-radius: 10px;
+  background: #fbfdfc;
+  color: #243b2d;
+  font-size: 16px;
+  outline: none;
+}
+
+.form-group input[type="time"] {
+  width: 100%;
+  height: 50px;
+  padding: 0 13px;
+  border: 1px solid #cbdad1;
+  border-radius: 10px;
+  background: #fbfdfc;
+  color: #243b2d;
+  font-size: 16px;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #16834b;
+  box-shadow: 0 0 0 3px rgba(22, 131, 75, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #8b9a91;
+}
+
+/* =========================
+   FOOD TYPE
+========================= */
+
+.food-type-options {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px 0;
+}
+
+.food-type-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  color: #405449;
+  cursor: pointer;
+}
+
+.food-type-options input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #16834b;
+}
+
+/* =========================
+   PICKUP TIME
+========================= */
+
+.pickup-time-row {
+  display: flex;
+  gap: 25px;
+  width: 100%;
+}
+
+.time-field {
+  flex: 1;
+}
+
+.time-field span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #405449;
+}
+
+.time-field input[type="time"] {
+  display: block;
+  width: 100%;
+}
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.submit-button {
+  display: block;
+  width: 100%;
+  height: 54px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 10px;
+  background: #16834b;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: #116b3d;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #173b2a;
+  color: white;
+  padding: 45px 10%;
+}
+
+footer .logo {
+  color: white;
+  margin-bottom: 10px;
+}
+
+footer p {
+  color: #c9d8cf;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 70px 7%;
+  }
+
+  .role-section {
+    padding: 60px 7%;
+  }
+
+  .feature-section {
+    padding: 50px 7%;
+  }
+
+  .form-card {
+    max-width: 680px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 60px 7%;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .role-section {
+    grid-template-columns: 1fr;
+    padding: 50px 7%;
+  }
+
+  .feature-section {
+    grid-template-columns: 1fr;
+    padding: 50px 7%;
+  }
+
+  .form-card {
+    padding: 35px 25px;
+  }
+
+  .pickup-time-row {
+    gap: 15px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 500px) {
+  .logo {
+    font-size: 25px;
+  }
+
+  .nav-right select {
+    padding: 8px 10px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .form-card {
+    padding: 30px 20px;
+  }
+
+  .form-card h1 {
+    font-size: 27px;
+  }
+
+  .food-type-options {
+    gap: 18px;
+  }
+
+  .pickup-time-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+.matching-card {
+  margin-top: 25px;
+  border: 2px solid #16834b;
+  background: #f8fdf9;
+}
+
+.matching-card h3 {
+  color: #16834b;
+  margin-bottom: 25px;
+}
+
+.match-item {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  border: 1px solid #dcebe1;
+  margin-bottom: 18px;
+}
+
+.match-item:last-child {
+  margin-bottom: 0;
+}
+
+.match-item h4 {
+  font-size: 19px;
+  color: #173b2a;
+  margin-bottom: 12px;
+}
+
+.match-item p {
+  margin-bottom: 7px;
+  color: #5b6f63;
+  line-height: 1.5;
+}
+
+.match-status {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: #e7f6ed;
+  color: #16834b;
+  font-weight: 600;
+  font-size: 14px;
+}
+.status-card {
+  margin-top: 25px;
+  background: #ffffff;
+}
+
+.status-card h3 {
+  color: #16834b;
+  margin-bottom: 30px;
+}
+
+.status-timeline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.status-step {
+  text-align: center;
+  min-width: 85px;
+}
+
+.status-step span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: #e8eee9;
+  color: #718078;
+  font-weight: 700;
+}
+
+.status-step.active span {
+  background: #16834b;
+  color: white;
+}
+
+.status-step p {
+  font-size: 14px;
+  color: #53665b;
+  font-weight: 600;
+  margin: 0;
+}
+
+.status-line {
+  flex: 1;
+  height: 3px;
+  margin-top: 18px;
+  background: #dfe8e2;
+  max-width: 80px;
+}
+
+.status-note {
+  text-align: center;
+  padding: 14px;
+  border-radius: 10px;
+  background: #e7f6ed;
+  color: #405449;
+}
+
+.status-note strong {
+  color: #16834b;
+}
