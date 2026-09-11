@@ -1373,7 +1373,7 @@ if (page === "dashboard") {
 
     try {
       const response = await fetch(
-        "https://foodrescue-backend-2h9k.onrender.com/api/login",
+        "https://foodrescue-backend-1bhd.onrender.com/api/login",
         {
           method: "POST",
           headers: {
