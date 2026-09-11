@@ -1358,51 +1358,97 @@ if (page === "dashboard") {
             </p>
 
             <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert(t.loginSuccess);
-              }}
-            >
-              <div className="form-group">
-                <label>{t.loginEmail}</label>
-                <input
-                  type="email"
-                  placeholder={t.loginEmailPlaceholder}
-                />
-              </div>
+  onSubmit={async (e) => {
+    e.preventDefault();
 
-              <div
-                style={{
-                  textAlign: "center",
-                  margin: "10px 0",
-                  color: "#777",
-                  fontWeight: "600",
-                }}
-              >
-                {t.or}
-              </div>
+    const form = e.target;
 
-              <div className="form-group">
-                <label>{t.loginPhone}</label>
-                <input
-                  type="tel"
-                  placeholder={t.loginPhonePlaceholder}
-                />
-              </div>
+    const email = form.loginEmail.value.trim();
+    const password = form.password.value;
 
-              <div className="form-group">
-                <label>{t.password}</label>
-                <input
-                  type="password"
-                  placeholder={t.passwordPlaceholder}
-                  required
-                />
-              </div>
+    if (!email) {
+      alert("Please enter your email.");
+      return;
+    }
 
-              <button type="submit" className="submit-button">
-                {t.loginButton}
-              </button>
-            </form>
+    try {
+      const response = await fetch(
+        "http://localhost:5000/api/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            EMAIL: email,
+            PASSWORD: password,
+          }),
+        }
+      );
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        alert(data.error || "Login failed");
+        return;
+      }
+
+      console.log("LOGIN SUCCESS:", data);
+
+      alert(t.loginSuccess);
+
+      setDashboardRole(data.user.ROLE);
+      setPage("dashboard");
+
+    } catch (error) {
+      console.error("Login error:", error);
+      alert("Cannot connect to backend. Is the backend running?");
+    }
+  }}
+>
+  <div className="form-group">
+    <label>{t.loginEmail}</label>
+    <input
+      name="loginEmail"
+      type="email"
+      placeholder={t.loginEmailPlaceholder}
+      required
+    />
+  </div>
+
+  <div
+    style={{
+      textAlign: "center",
+      margin: "10px 0",
+      color: "#777",
+      fontWeight: "600",
+    }}
+  >
+    {t.or}
+  </div>
+
+  <div className="form-group">
+    <label>{t.loginPhone}</label>
+    <input
+      type="tel"
+      placeholder={t.loginPhonePlaceholder}
+    />
+  </div>
+
+  <div className="form-group">
+    <label>{t.password}</label>
+    <input
+      name="password"
+      type="password"
+      placeholder={t.passwordPlaceholder}
+      required
+    />
+  </div>
+
+  <button type="submit" className="submit-button">
+    {t.loginButton}
+  </button>
+</form>
 
             <p style={{ textAlign: "center", marginTop: "22px" }}>
               {t.noAccount}{" "}
