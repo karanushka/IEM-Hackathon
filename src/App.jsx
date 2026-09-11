@@ -15,9 +15,9 @@ function App() {
   const loadDashboard = async () => {
     try {
       const [donationRes, requestRes, matchRes] = await Promise.all([
-        fetch("https://foodrescue-backend-2h9k.onrender.com/api/donations"),
-        fetch("https://foodrescue-backend-2h9k.onrender.com/api/requests"),
-        fetch("https://foodrescue-backend-2h9k.onrender.com/api/matches"),
+        fetch("https://foodrescue-backend-1bhd.onrender.com/api/donations"),
+        fetch("https://foodrescue-backend-1bhd.onrender.com/api/requests"),
+        fetch("https://foodrescue-backend-1bhd.onrender.com/api/matches"),
       ]);
 
       const donationData = await donationRes.json();
